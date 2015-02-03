@@ -19,6 +19,9 @@ class Stack():
 		self.towers[destination].append(dummy)
 		self.moveDisks(n-1, temp,destination,origin)
 
+
+#Code to test
+
 S=Stack()
 
 for i in range(10,0,-1):
