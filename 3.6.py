@@ -17,28 +17,26 @@ class Stack:
 		return len(self.items)==0
 
 	def peek(self):
+		if len(self.items)==0:
+			return None
 		return self.items[-1]
 
 
 def stackSort(S1):
 	S2=Stack()
 	while (not S1.isEmpty()):
-		if (S2.isEmpty):
-			S2.push(S1.pop())
+		if (S2.isEmpty()):
+			S2.push(S1.pop())			
 		else:
-			temp = S1.pop()
-			while temp<S2.peek():
+			temp = S1.pop()			
+			while (temp < S2.peek()):
 				S1.push(S2.pop())
 			S2.push(temp)
 	print S2.items
 	while (not S2.isEmpty()):
 		S1.push(S2.pop())
 
-
-
-
-
-
+# testing
 S1=Stack()
 
 for i in range(10):
@@ -46,7 +44,7 @@ for i in range(10):
 
 for i in range(10):
 	S1.push(i)
-	
+
 print S1.items
 stackSort(S1)
 
