@@ -6,20 +6,30 @@ specificanimal they would like. Create the data structures to maintain this syst
 and implement operations such as enqueue, dequeueAny, dequeueDog and
 dequeueCat.You may use the built-in LinkedList data structure'''
 
-class Shelter:
-	def __init__(self,name):
+class Animal:
+	def __init__(self,name=None,kind=None):
 		self.name=name
+		self.kind=kind
+		self.next=next
 
-	class Node:
-		def __init__(self,cargo=None,kind=None,next=None):
-			self.name=cargo
-			self.kind=kind
-			self.next=next
-
-	def enqueue(self,type,name):
+	def enqueue(self,name,kind):
 		head=self
-		while(head.next):
+		while head.next:
 			head=head.next
-		head.next
+		head.next=Animal(name,kind)
+
+	def dequeueAny(self):
+		temp=self
+		self=self.next
+		return temp.name
+
+a=Animal('cas','cat')
+
+print a
+
+print a.dequeueAny()
+
+print a.dequeueAny()
+print a 
 
 
