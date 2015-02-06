@@ -6,6 +6,19 @@ specificanimal they would like. Create the data structures to maintain this syst
 and implement operations such as enqueue, dequeueAny, dequeueDog and
 dequeueCat.You may use the built-in LinkedList data structure'''
 
+class Animal():
+	def __init__(self,name,kind):
+		self.name=name
+		self.kind=kind
+
+	def enqueue(self:
+
+
+def  Shelter(name):
+	
+
+
+
 class Animal:
 	def __init__(self,name=None,kind=None):
 		self.name=name
