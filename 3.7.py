@@ -10,8 +10,20 @@ class Animal():
 	def __init__(self,name,kind):
 		self.name=name
 		self.kind=kind
+		self.next=None
 
-	def enqueue(self:
+	def enqueue(self,name,kind):
+		while(self.next):
+			self=self.next
+		self.next=Animal(name,kind)
+
+	def dequeueAny(self):
+		temp_name=self.name
+		temp_kind=self.kind
+		self.name=self.next.name
+		self.kind=self.next.kind
+		self.next=self.next.next
+		
 
 
 def  Shelter(name):
